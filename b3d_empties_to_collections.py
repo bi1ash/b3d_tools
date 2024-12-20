@@ -12,7 +12,7 @@ bl_info = {
 
 import bpy
 
-class OBJECT_OT_create_collections_from_empties(bpy.types.Operator):
+class collections_from_empties(bpy.types.Operator):
     """Converts selected empties to Collections"""
     bl_idname = "object.create_collections_from_empties"
     bl_label = "Convert Selected Empties"
@@ -60,16 +60,16 @@ def menu_func_outliner_object(self, context):
     if context.object: # Only show if an object is selected
        layout = self.layout
        layout.separator()  # optional separator
-       layout.operator(OBJECT_OT_create_collections_from_empties.bl_idname)
+       layout.operator(create_collections_from_empties.bl_idname)
 
 
 def register():
-    bpy.utils.register_class(OBJECT_OT_create_collections_from_empties)
+    bpy.utils.register_class(create_collections_from_empties)
     bpy.types.OUTLINER_MT_object.append(menu_func_outliner_object)
 
 
 def unregister():
-    bpy.utils.unregister_class(OBJECT_OT_create_collections_from_empties)
+    bpy.utils.unregister_class(create_collections_from_empties)
     bpy.types.OUTLINER_MT_object.remove(menu_func_outliner_object)
 
 
