@@ -1,8 +1,10 @@
 bl_info = {
     "name" : "Empties To Collections",
     "version" : (1,0),
+    "author" : "bi1ash" 
     "blender" : (4,3,1),
     "location" : "Outliner > Right-Click Menu",
+    "doc_url" : "https://github.com/bi1ash/b3d_tools"
     "description" : "Convert selected Empties to Collections",
     "category" : "USD Tools",
 }
